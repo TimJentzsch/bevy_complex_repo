@@ -1,3 +1,3 @@
 fn main() {
-    println!("Hello, world!");
+    println!("Running `cplx_demo`");
 }

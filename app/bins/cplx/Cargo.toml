@@ -3,4 +3,7 @@ name = "cplx"
 version = "0.1.0"
 edition = "2021"
 
+# Run the main game by default
+default-run = "cplx"
+
 [dependencies]
