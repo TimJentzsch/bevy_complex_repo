@@ -3,4 +3,4 @@ resolver = "2"
 members = ["libs/*", "bins/*"]
 
 [workspace.dependencies]
-bevy = "0.14"
+bevy = { git = "https://github.com/bushrat011899/bevy", branch = "Supportwasm32v1-none" }

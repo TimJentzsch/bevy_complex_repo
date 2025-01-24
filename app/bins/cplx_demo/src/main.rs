@@ -8,23 +8,17 @@ fn main() {
 }
 
 fn setup(mut commands: Commands) {
-    commands.spawn(Camera2dBundle::default());
+    commands.spawn(Camera2d);
 
     commands
-        .spawn(NodeBundle {
+        .spawn(Node {
             ..Default::default()
         })
         .with_children(|builder| {
-            builder.spawn(Text2dBundle {
-                text: Text::from_section(
-                    "CPLX DEMO",
-                    TextStyle {
-                        color: Color::WHITE,
-                        font_size: 60.,
-                        ..Default::default()
-                    },
-                ),
-                ..Default::default()
-            });
+            builder.spawn((
+                Text::new("CPLX Demo"),
+                TextFont::from_font_size(60.),
+                TextColor::WHITE,
+            ));
         });
 }
