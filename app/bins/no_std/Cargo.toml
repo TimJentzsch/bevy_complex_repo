@@ -1,0 +1,12 @@
+[package]
+name = "no_std"
+version = "0.1.0"
+edition = "2024"
+
+[package.metadata.bevy_cli.web]
+target = "wasm32v1-none"
+
+[dependencies]
+bevy = { version = "0.16.0-rc.3", default-features = false, features = ["web"] }
+wasm-bindgen = { version = "0.2.100", default-features = false, features = ["msrv"] }
+wee_alloc = "0.4.5"
