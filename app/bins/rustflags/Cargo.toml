@@ -1,0 +1,19 @@
+[package]
+name = "rustflags"
+version = "0.1.0"
+edition = "2024"
+
+[package.metadata.bevy_cli.web]
+rustflags = ['--cfg getrandom_backend="wasm_js"']
+
+[package.metadata.bevy_cli]
+rustflags = "-C opt-level=2"
+
+[dependencies]
+bevy = "0.16.0-rc.5"
+bevy_rand = { git = "https://github.com/Bluefinger/bevy_rand", branch = "prepare-v0.16", package = "bevy_rand", features = [
+  "wyrand",
+] }
+
+[target.wasm32-unknown-unknown.dependencies]
+getrandom = { version = "0.3.2", features = ["wasm_js"] }
