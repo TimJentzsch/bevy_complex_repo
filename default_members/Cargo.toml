@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = ["packages/*"]
+default-members = ["packages/default"]
+
+[workspace.dependencies]
+bevy = "0.14"
