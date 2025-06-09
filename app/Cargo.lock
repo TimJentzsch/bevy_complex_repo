@@ -2790,6 +2790,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "96a6ac251f4a2aca6b3f91340350eab87ae57c3f127ffeb585e92bd336717991"
 
 [[package]]
+name = "custom_web_folder"
+version = "0.1.0"
+dependencies = [
+ "bevy 0.16.0-rc.5",
+]
+
+[[package]]
 name = "d3d12"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
