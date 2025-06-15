@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "app"
+    },
+    {
+      "path": "default_members"
+    },
+    {
+      "path": "no_std"
+    },
+    {
+      "path": ".",
+      "name": "root"
+    }
+  ]
+}
