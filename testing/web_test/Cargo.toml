@@ -1,0 +1,12 @@
+[package]
+name = "web_test"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+web = []
+
+[package.metadata.bevy_cli.web]
+features = ["web"]
+
+[dependencies]

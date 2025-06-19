@@ -7,6 +7,9 @@
       "path": "default_members"
     },
     {
+      "path": "testing"
+    },
+    {
       "path": "no_std"
     },
     {

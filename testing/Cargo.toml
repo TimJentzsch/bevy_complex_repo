@@ -1,0 +1,4 @@
+[workspace]
+resolver = "2"
+members = ["web_test"]
+default-members = ["web_test"]
