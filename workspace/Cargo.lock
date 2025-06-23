@@ -4506,6 +4506,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "package_asset_folder"
+version = "0.1.0"
+dependencies = [
+ "bevy 0.16.1",
+]
+
+[[package]]
 name = "parking"
 version = "2.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
