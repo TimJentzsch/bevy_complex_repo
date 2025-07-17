@@ -1,0 +1,13 @@
+[package]
+name = "lint"
+version = "0.1.0"
+edition = "2024"
+
+[package.metadata.bevy_cli.web]
+rustflags = ['--cfg getrandom_backend="wasm_js"']
+
+[dependencies]
+bevy = "0.16.0"
+
+[target.wasm32-unknown-unknown.dependencies]
+getrandom = { version = "0.3.2", features = ["wasm_js"] }
