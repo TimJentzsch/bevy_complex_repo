@@ -5,3 +5,4 @@ edition = "2024"
 
 [dependencies]
 bevy = { workspace = true }
+wasm-bindgen = "0.2.100"

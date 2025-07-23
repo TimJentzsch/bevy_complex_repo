@@ -2513,6 +2513,7 @@ name = "js_snippets"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "wasm-bindgen",
 ]
 
 [[package]]
