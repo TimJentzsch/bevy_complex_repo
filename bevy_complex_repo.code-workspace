@@ -7,6 +7,9 @@
       "path": "default_members"
     },
     {
+      "path": "web_assets"
+    },
+    {
       "path": "testing"
     },
     {

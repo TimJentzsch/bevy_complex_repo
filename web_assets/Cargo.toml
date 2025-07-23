@@ -1,0 +1,6 @@
+[workspace]
+resolver = "2"
+members = ["packages/*"]
+
+[workspace.dependencies]
+bevy = "0.16"
