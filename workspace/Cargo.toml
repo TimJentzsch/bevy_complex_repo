@@ -3,4 +3,4 @@ resolver = "2"
 members = ["libs/*", "bins/*"]
 
 [workspace.dependencies]
-bevy = "0.14"
+bevy = "0.16"

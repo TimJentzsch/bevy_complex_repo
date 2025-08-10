@@ -10,22 +10,21 @@ fn main() {
 fn setup(mut commands: Commands) {
     commands.spawn(Camera2d);
 
-    commands
-        .spawn(Node {
+    commands.spawn((
+        Node {
             width: Val::Percent(100.),
             height: Val::Percent(100.),
             justify_content: JustifyContent::Center,
             align_items: AlignItems::Center,
-            ..Default::default()
-        })
-        .with_children(|builder| {
-            builder.spawn((
-                Text::new("wasm-opt"),
-                TextColor::WHITE,
-                TextFont {
-                    font_size: 60.,
-                    ..Default::default()
-                },
-            ));
-        });
+            ..default()
+        },
+        children![(
+            Text::new("wasm-opt"),
+            TextColor::WHITE,
+            TextFont {
+                font_size: 60.,
+                ..Default::default()
+            },
+        ),],
+    ));
 }

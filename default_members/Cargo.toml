@@ -4,4 +4,4 @@ members = ["packages/*"]
 default-members = ["packages/default"]
 
 [workspace.dependencies]
-bevy = "0.14"
+bevy = "0.16"

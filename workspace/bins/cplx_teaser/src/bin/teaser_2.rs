@@ -8,23 +8,23 @@ fn main() {
 }
 
 fn setup(mut commands: Commands) {
-    commands.spawn(Camera2dBundle::default());
+    commands.spawn(Camera2d);
 
-    commands
-        .spawn(NodeBundle {
-            ..Default::default()
-        })
-        .with_children(|builder| {
-            builder.spawn(Text2dBundle {
-                text: Text::from_section(
-                    "CPLX Teaser 2",
-                    TextStyle {
-                        color: Color::WHITE,
-                        font_size: 60.,
-                        ..Default::default()
-                    },
-                ),
+    commands.spawn((
+        Node {
+            width: Val::Percent(100.),
+            height: Val::Percent(100.),
+            justify_content: JustifyContent::Center,
+            align_items: AlignItems::Center,
+            ..default()
+        },
+        children![(
+            Text::new("CPLX Teaser 2"),
+            TextColor::WHITE,
+            TextFont {
+                font_size: 60.,
                 ..Default::default()
-            });
-        });
+            },
+        ),],
+    ));
 }
