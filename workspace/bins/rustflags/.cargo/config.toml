@@ -1,0 +1,3 @@
+[target.wasm32-unknown-unknown]
+# Should be merged with the ones defined via the CLI
+rustflags = ["-Zshare-generics=y", "-Zthreads=8"]
