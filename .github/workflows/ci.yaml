@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  typos:
+    name: Build for web
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install bevy dependencies
+        run: sudo apt-get update && sudo apt-get install --no-install-recommends libasound2-dev
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install bevy CLI from branch
+        run: cargo install --git https://github.com/TheBevyFlock/bevy_cli --branch 212-improve-error-message-on-interactive-prompt bevy_cli
+
+      - name: Run bevy build web
+        run: bevy build web
+        working-directory: ./app
